@@ -1,0 +1,91 @@
+#card_css {
+    width: 430px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    /* border: 4px double .e8ecb8cb; */
+    background-Color: #fdfbea;
+    border-radius: 4px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    padding: .0rem 0rem .0rem .0rem;
+    transition: .1s ease-in-out;
+}
+
+.card-body {
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#card_css:hover {
+    transform: scale(1.03);
+    background: #fdffb6f1;
+    box-shadow: 0 8px 10px #264653, 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.desc {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgba(58, 56, 56, 0.795);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'Cormorant Infant', serif;
+    font-family: 'Varta', sans-serif;
+}
+
+.Button {
+    padding: 4px auto 4px auto;
+    margin-bottom: 6px;
+}
+
+.Button .Button-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 6px 24px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.Button .Button-btn:hover {
+    background: rgba(87, 83, 83, 0.575);
+    border: 6px double #d90429;
+}
+
+#self_btn {
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    row-gap: 10px;
+}
+
+#self_btn div {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 6px;
+    padding: .3rem 2rem;
+}
