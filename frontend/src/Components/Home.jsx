@@ -21,12 +21,11 @@ const Home = () => {
   useEffect(() => {
     console.log("useEffect running");
 
-    axios
-      .get("http://localhost:4040/api/notes/") // fetching all Data from the database-backend
-      .then((res) => {
-        console.log("data", res.data);
-        setNotes(res.data);
-      });
+    // fetching all Data from the database-backend
+    axios.get("http://localhost:4040/api/notes/").then((res) => {
+      console.log("data", res.data);
+      setNotes(res.data);
+    });
   }, []);
 
   console.log(notes);

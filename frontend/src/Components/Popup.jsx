@@ -13,12 +13,13 @@ const Popup = ({ type, setEditPopup, singleNote, setNotes, setSingleNote }) => {
         }
   );
 
-  const EditNote = async (_id) => {
+  const editNoteHandler = async (_id) => {
     const editedData = {
       name: data.name,
       description: data.description,
       _id: data._id,
     };
+
     const res = await axios.put(`http://localhost:4040/api/notes/${_id}`, editedData, {
       headers: {
         contentType: "application/json",
@@ -26,13 +27,12 @@ const Popup = ({ type, setEditPopup, singleNote, setNotes, setSingleNote }) => {
     });
     console.log(res.data);
 
-    axios
-      .get("http://localhost:4040/api/notes/") // fetching from the backend
-      .then((res) => {
-        console.log("data", res.data);
-        setNotes(res.data);
-        setEditPopup(false);
-      });
+    // fetching from the backend
+    axios.get("http://localhost:4040/api/notes/").then((res) => {
+      console.log("data", res.data);
+      setNotes(res.data);
+      setEditPopup(false);
+    });
   };
 
   const AddNote = async () => {
@@ -87,7 +87,7 @@ const Popup = ({ type, setEditPopup, singleNote, setNotes, setSingleNote }) => {
             }
           />
           {type === "edit" ? (
-            <button onClick={() => EditNote(singleNote._id)}>Update Note</button>
+            <button onClick={() => editNoteHandler(singleNote._id)}>Update Note</button>
           ) : (
             <button onClick={() => AddNote()}>Add Note</button>
           )}
