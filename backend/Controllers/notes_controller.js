@@ -5,7 +5,6 @@ import NOTE from "../Models/Note_model.js";
 // @desc       Fetch all the Notes
 // @Route      GET/api/notes/
 // @access      public
-
 const getNotes = asyncHandler(async (req, res) => {
   // Fetch all 6 products from the backend
   const notes = await NOTE.find({});
